@@ -150,9 +150,9 @@ class QueueController extends Controller
                         ->with('success', 'Today\'s queues have been reset');
     }
 
-    public function print($id)
+    public function print()
     {
-        $queue = Queue::findOrFail($id);
+        $queue = Queue::findOrFail(32);
 
         return view('queue.print.queue', compact('queue'));
     }
